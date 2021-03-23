@@ -1,0 +1,15 @@
+# env
+.local
+.venv
+.env
+__pycache__
+.pytest_cache
+
+# IDE
+.vscode
+.idea
+**/*.code-workspace
+
+# Files
+.bash_history
+.ipynb_checkpoints
