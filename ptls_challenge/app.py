@@ -1,6 +1,6 @@
 from ptls_challenge import splitter
-from ptls_challenge import base_mapreducer
-from ptls_challenge import getSpanMessages
+from ptls_challenge import base_map_reducer
+from ptls_challenge import compute_span_messages
 import glob 
 import os
 
