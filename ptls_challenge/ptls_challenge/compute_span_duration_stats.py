@@ -1,6 +1,8 @@
 from ptls_challenge.base_map_reducer import MapReducer
+from ptls_challenge import helpers
 from typing import List,Dict
 import heapq
+import logging
 
 class ComputeSpanDurationStats(MapReducer):
 
@@ -8,6 +10,7 @@ class ComputeSpanDurationStats(MapReducer):
         super().__init__(split_files)
     
     def mapper(self):
+        logging.info("=====In Mapper method=====")
         span_durations = dict()
         for prefix,event,value in super().read_split_files():
             if prefix == 'item.spanId':
@@ -30,6 +33,7 @@ class ComputeSpanDurationStats(MapReducer):
                         yield name,duration
                 else:
                     span_durations[spanId] = int(value)
+        logging.info("=====Mapper step complete=====")
 
     def reducer(self,map_output) -> Dict:
         """
@@ -45,6 +49,7 @@ class ComputeSpanDurationStats(MapReducer):
          - at the end we will have top 5% values on the heap 
            and p95 = top element of this heap 
         """
+        logging.info("=====In Reducer method=====")
         running_sum = 0
         num = 0
         min_duration = float('inf')
@@ -63,9 +68,13 @@ class ComputeSpanDurationStats(MapReducer):
                 min_duration = duration
             if duration > max_duration:
                 max_duration = duration 
-        return {'min_duration': min_duration, 'max_duration': max_duration, 
-                'avg_duration': running_sum/num, 'p95_duration': top_5_pct_durations[0]
-               }
+        logging.info("=====Reducer step complete=====")
+        if num > 0:
+            return {'min_duration': min_duration, 'max_duration': max_duration, 
+                    'avg_duration': running_sum//num, 'p95_duration': top_5_pct_durations[0]
+                   }
+        else:
+            raise Exception("No events found!!")
 
     def compute(self):
         return self.reducer(self.mapper())    
