@@ -11,7 +11,7 @@ class ComputeUniqueSpans(MapReducer):
             if (prefix, event) == ('item.spanId', 'number'):
                 yield value
 
-    def reducer(self,map_output):
+    def reducer(self,map_output) -> int:
         unique_spans = set()
         for value in map_output:
             unique_spans.add(value)

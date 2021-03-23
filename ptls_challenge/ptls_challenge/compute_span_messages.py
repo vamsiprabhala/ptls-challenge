@@ -11,7 +11,7 @@ class ComputeSpanMessages(MapReducer):
             if (prefix, event) == ('item.messageSequenceNumber', 'number'):
                 yield (value,1)
 
-    def reducer(self,map_output):
+    def reducer(self,map_output) -> int:
         result = 0
         for _,num in map_output:
             result += num

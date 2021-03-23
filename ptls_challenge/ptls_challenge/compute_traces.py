@@ -17,7 +17,7 @@ class ComputeTraces(MapReducer):
                 msb, lsb = None, None 
 
 
-    def reducer(self,map_output):
+    def reducer(self,map_output) -> int:
         unique_traces = set()
         for traceid in map_output:
             unique_traces.add(traceid)

@@ -1,5 +1,5 @@
 from ptls_challenge.base_map_reducer import MapReducer
-from typing import List
+from typing import List,Set
 
 class ComputeSpanNames(MapReducer):
 
@@ -11,7 +11,7 @@ class ComputeSpanNames(MapReducer):
             if (prefix, event) == ('item.name', 'string'):
                 yield value
 
-    def reducer(self,map_output):
+    def reducer(self,map_output) -> Set:
         span_names = set()
         for span_name in map_output:
             span_names.add(span_name)
