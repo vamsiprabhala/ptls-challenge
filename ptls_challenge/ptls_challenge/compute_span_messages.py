@@ -1,8 +1,9 @@
 from ptls_challenge.base_map_reducer import MapReducer
+from typing import List
 
 class ComputeSpanMessages(MapReducer):
 
-    def __init__(self, split_files: str):
+    def __init__(self, split_files: List[str]):
         super().__init__(split_files)
     
     def mapper(self):
