@@ -14,6 +14,8 @@
 
 # Run the app
 Execute the following from the top level directory `ptls_challenge`
-> python ptls_challenge/app.py 
+
+> python ptls_challenge/app.py JSON_FILE_NAME
+
 Provide the input json file path argument to the script. By default, it computes all the metrics 
 and prints the results to stdout.
