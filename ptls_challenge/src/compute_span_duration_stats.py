@@ -1,5 +1,5 @@
-from ptls_challenge.base_map_reducer import MapReducer
-from ptls_challenge import helpers
+from src.base.base_map_reducer import MapReducer
+from src.config import helpers
 from typing import List,Dict
 import heapq
 import logging

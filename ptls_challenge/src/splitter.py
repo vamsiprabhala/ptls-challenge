@@ -1,7 +1,7 @@
 import os
 import sys
 import ijson
-from ptls_challenge import helpers
+from src.config import helpers
 import logging
 
 class Splitter:

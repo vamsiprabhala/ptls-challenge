@@ -1,12 +1,12 @@
-from ptls_challenge import splitter
-from ptls_challenge import base_map_reducer
-from ptls_challenge import compute_span_messages
-from ptls_challenge import compute_unique_spans
-from ptls_challenge import compute_traces
-from ptls_challenge import compute_span_names
-from ptls_challenge import compute_trace_names
-from ptls_challenge import compute_span_duration_stats
-from ptls_challenge import compute_span_name_min_max_avgduration
+from src import splitter
+from src.base import base_map_reducer
+from src import compute_span_messages
+from src import compute_unique_spans
+from src import compute_traces
+from src import compute_span_names
+from src import compute_trace_names
+from src import compute_span_duration_stats
+from src import compute_span_name_min_max_avgduration
 import glob 
 import os
 import argparse

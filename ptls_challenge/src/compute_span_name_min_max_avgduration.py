@@ -1,4 +1,4 @@
-from ptls_challenge.base_map_reducer import MapReducer
+from src.base.base_map_reducer import MapReducer
 from typing import List,Dict
 import heapq
 
