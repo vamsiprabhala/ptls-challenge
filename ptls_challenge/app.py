@@ -9,10 +9,14 @@ from ptls_challenge import compute_span_duration_stats
 from ptls_challenge import compute_span_name_min_max_avgduration
 import glob 
 import os
+import argparse
 
 
 if __name__ == '__main__':
-    INPUT_FILE_PATH = '/Users/vkprabhala/Desktop/twitter-challenge'
+    parser = argparse.ArgumentParser()
+    parser.add_argument("file_path", help="Please provide an absolute input JSON file path", type=str)
+    args = parser.parse_args()
+    INPUT_FILE_PATH = args.file_path #'/Users/vkprabhala/Desktop/twitter-challenge'
     INPUT_FILE = 'application-trace.json'
     SPLIT_FILE_PATTERN = 'split-*.txt'
     split_obj = splitter.Splitter(INPUT_FILE_PATH, INPUT_FILE)
@@ -32,7 +36,7 @@ if __name__ == '__main__':
     span_duration_stats = compute_span_duration_stats.ComputeSpanDurationStats(SPLIT_FILES)
     print("Span Duration Stats = {}".format(span_duration_stats.compute()))
     span_name_avgduration_stats = compute_span_name_min_max_avgduration.ComputeSpanNameMinMaxAvgDuration(SPLIT_FILES)
-    print("Span Name Avg Duration Stats = {}".format(span_name_avgduration_stats.compute()))
+    #print("Span Name Avg Duration Stats = {}".format(span_name_avgduration_stats.compute()))
 
 
 
