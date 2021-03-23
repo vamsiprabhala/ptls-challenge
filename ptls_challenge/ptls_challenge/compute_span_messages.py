@@ -1,4 +1,4 @@
-from ptls_challenge.base_mapreducer import MapReducer
+from ptls_challenge.base_map_reducer import MapReducer
 
 class ComputeSpanMessages(MapReducer):
 
