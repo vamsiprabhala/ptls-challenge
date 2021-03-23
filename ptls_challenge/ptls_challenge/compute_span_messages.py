@@ -1,6 +1,6 @@
 from ptls_challenge.base_mapreducer import MapReducer
 
-class GetSpanMessages(MapReducer):
+class ComputeSpanMessages(MapReducer):
 
     def __init__(self, split_files: str):
         super().__init__(split_files)
