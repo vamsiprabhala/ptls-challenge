@@ -10,6 +10,10 @@ class ComputeSpanDurationStats(MapReducer):
         super().__init__(split_files)
     
     def mapper(self):
+        """
+        Maintain a dictionary to compute spanId duration
+        yield span name and duration
+        """
         logging.info("=====Start Mapper Step=====")
         span_durations = dict()
         for prefix,event,value in super().read_split_files():

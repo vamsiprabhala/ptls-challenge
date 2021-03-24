@@ -7,6 +7,9 @@ class ComputeTraces(MapReducer):
         super().__init__(split_files)
     
     def mapper(self):
+        """
+        yield msb,lsb pair for each record
+        """
         logging.info("=====Start Mapper Step=====")
         msb, lsb = None, None
         for prefix,event,value in super().read_split_files():
@@ -20,6 +23,9 @@ class ComputeTraces(MapReducer):
 
 
     def reducer(self,map_output) -> int:
+        """
+        add (msb,lsb) tuple to a set and return its length
+        """
         logging.info("=====Start Reducer Step=====")
         unique_traces = set()
         for traceid in map_output:

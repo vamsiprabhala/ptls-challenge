@@ -7,6 +7,9 @@ class ComputeSpanNames(MapReducer):
         super().__init__(split_files)
     
     def mapper(self):
+        """
+        yield span name
+        """
         logging.info("=====Mapper Step Complete=====")
         for prefix,event,value in super().read_split_files():
             if (prefix, event) == ('item.name', 'string'):
@@ -14,6 +17,9 @@ class ComputeSpanNames(MapReducer):
         logging.info("=====Mapper Step Complete=====")
 
     def reducer(self,map_output) -> Set:
+        """
+        add span name to Set and return it
+        """
         logging.info("=====Start Reducer Step=====")
         span_names = set()
         for span_name in map_output:

@@ -9,6 +9,9 @@ class CompareAppVersionPerformance(MapReducer):
         super().__init__(split_files)
     
     def mapper(self):
+        """
+        yield name, duration, appId and country
+        """
         logging.info("=====Start Mapper Step=====")
         span_durations = dict()
         for prefix,event,value in super().read_split_files():

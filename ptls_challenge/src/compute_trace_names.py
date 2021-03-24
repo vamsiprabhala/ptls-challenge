@@ -25,6 +25,9 @@ class ComputeTraceNames(MapReducer):
         logging.info("=====Mapper Step Complete=====")
 
     def reducer(self,map_output) -> Set:
+        """
+        add trace names to a Set and return it
+        """
         logging.info("=====Start Reducer Step=====")
         trace_names = set()
         for trace_name in map_output:

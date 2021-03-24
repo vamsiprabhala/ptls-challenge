@@ -7,6 +7,9 @@ class ComputeSpanMessages(MapReducer):
         super().__init__(split_files)
     
     def mapper(self):
+        """
+        yield a tuple of (messageSequenceNumber,1)
+        """
         logging.info("=====Start Mapper Step=====")
         for prefix,event,value in super().read_split_files():
             if (prefix, event) == ('item.messageSequenceNumber', 'number'):
@@ -14,6 +17,9 @@ class ComputeSpanMessages(MapReducer):
         logging.info("=====Mapper Step Complete=====")
 
     def reducer(self,map_output) -> int:
+        """
+        add the second element of tuple and return it
+        """
         logging.info("=====Start Reducer Step=====")
         result = 0
         for _,num in map_output:
