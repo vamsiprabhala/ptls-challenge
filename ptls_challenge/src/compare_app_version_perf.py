@@ -58,7 +58,7 @@ class CompareAppVersionPerformance(MapReducer):
         {('loading-timeline-tweets', '123', 'US'): (297034, 9993), ('authenticating-user', '123', 'US'): (197040, 9999), 
          ...
         }
-        Sort the dictionary items by name,appid and average duration 
+        Sort the dictionary items by name,appid and average duration in ascending order 
         Compare each tuple with its next and print the message accordingly 
         (only need to look at alternate indices - because of sorted list of tuples)
         """
