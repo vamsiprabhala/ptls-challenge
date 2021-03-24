@@ -14,6 +14,8 @@ class MapReducer:
 
 
     def read_split_files(self):
+        if len(self.split_files) == 0:
+            logging.info("======Received 0 Split files. Nothing to process======")
         for filename in self.split_files:
             with open(filename, 'r') as f:
                 for line in f:
