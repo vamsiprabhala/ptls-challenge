@@ -7,7 +7,7 @@ Data analysis for the questions was done in 2 ways.
 The code was implemented keeping in mind the constraint that file won't fit in memory and that the data can be big. 
 MapReduce programming model was chosen to implement the solution with the following structure. On a high level, the program has the following steps. 
 
-1. Split the file into multiple smaller chunks by choosing a chunk size = 100,000 json records each. Python package `ijson` was used to parse the json file. An example of parsed input is shown below. Parsed output helps keep track of the start and end of json record.  
+1. Split the file into multiple smaller chunks by choosing a chunk size = 100,000 json records each. Python package [ijson](https://pypi.org/project/ijson/) was used to parse the json file. An example of parsed input is shown below. Parsed output helps keep track of the start and end of json record.  
 
 ````
  start_array None
