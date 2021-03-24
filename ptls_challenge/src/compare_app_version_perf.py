@@ -9,7 +9,7 @@ class CompareAppVersionPerformance(MapReducer):
         super().__init__(split_files)
     
     def mapper(self):
-        logging.info("=====In Mapper method=====")
+        logging.info("=====Start Mapper Step=====")
         span_durations = dict()
         for prefix,event,value in super().read_split_files():
             if prefix == 'item.spanId':
@@ -36,14 +36,14 @@ class CompareAppVersionPerformance(MapReducer):
                         yield name,duration,appId,country
                 else:
                     span_durations[spanId] = int(value)
-        logging.info("=====Mapper step complete=====")
+        logging.info("=====Mapper Step Complete=====")
 
     def reducer(self,map_output) -> None:
         """
         avergae duration per span name, app version and country is computed
         and comparison is done by these dimensions to report faster/slower 
         """
-        logging.info("=====In Reducer method=====")
+        logging.info("=====Start Reducer Step=====")
         span_name_country_avg_durations = dict()
         for name,duration,appId,country in map_output:
             if (name,appId,country) not in span_name_country_avg_durations:
@@ -67,7 +67,7 @@ class CompareAppVersionPerformance(MapReducer):
         for i in range(0,len(sorted_dict),2):
             print(sorted_dict[i], "is faster and has less average duration compared to", sorted_dict[i+1])
         
-        logging.info("=====Reducer step complete=====")
+        logging.info("=====Reducer Step Complete=====")
         return 
 
 

@@ -12,6 +12,7 @@ class ComputeTraceNames(MapReducer):
         Getting all record keys and only adding the name
         when parentSpanId key doesn't exist for a record
         """
+        logging.info("=====Start Mapper Step=====")
         record_keys = set()
         for prefix,event,value in super().read_split_files():
             record_keys.add(prefix)
@@ -21,11 +22,14 @@ class ComputeTraceNames(MapReducer):
                 if 'item.parentSpanId' not in record_keys:
                     yield name
                 record_keys = set()
+        logging.info("=====Mapper Step Complete=====")
 
     def reducer(self,map_output) -> Set:
+        logging.info("=====Start Reducer Step=====")
         trace_names = set()
         for trace_name in map_output:
             trace_names.add(trace_name)
+        logging.info("=====Reducer Step Complete=====")
         return trace_names
 
     def compute(self):

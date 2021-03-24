@@ -7,14 +7,18 @@ class ComputeUniqueSpans(MapReducer):
         super().__init__(split_files)
     
     def mapper(self):
+        logging.info("=====Start Mapper Step=====")
         for prefix,event,value in super().read_split_files():
             if (prefix, event) == ('item.spanId', 'number'):
                 yield value
+        logging.info("=====Mapper Step Complete=====")
 
     def reducer(self,map_output) -> int:
+        logging.info("=====Start Reducer Step=====")
         unique_spans = set()
         for value in map_output:
             unique_spans.add(value)
+        logging.info("=====Reducer Step Complete=====")
         return len(unique_spans)   
 
     def compute(self):
