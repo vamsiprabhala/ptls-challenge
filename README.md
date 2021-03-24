@@ -6,7 +6,7 @@
 
 Download source code to a local directory using 
 
-    $ git clone git@github.com:vamsiprabhala/ptls-challenge.git`
+    $ git clone git@github.com:vamsiprabhala/ptls-challenge.git
 
 Then 
 
