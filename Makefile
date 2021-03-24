@@ -1,6 +1,6 @@
 
 # define the name of the virtual environment directory
-VENV := .venv
+VENV := .ptls-venv
 
 # default target, when make executed without arguments
 # all: .ptls-venv
@@ -13,9 +13,10 @@ $(VENV)/bin/activate: requirements.txt
 venv: $(VENV)/bin/activate
 
 run: venv
-	./$(VENV)/bin/python3 src/app.py $(JSON_FILE_PATH)
+	./$(VENV)/bin/python3 ptls_challenge/app.py $(JSON_FILE_PATH)
 
 clean:
+	deactivate
 	rm -rf $(VENV)
 	find . -type f -name '*.pyc' -delete
 
