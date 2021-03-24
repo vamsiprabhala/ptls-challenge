@@ -1,7 +1,7 @@
 import os
 import sys
 import ijson
-from src.config import helpers
+from src import logger
 import logging
 from typing import List
 
@@ -18,7 +18,7 @@ class Splitter:
         :output
         split_files -> List of split files
         """
-        helpers.logging_config()
+        logger.logging_config()
         file_to_parse = self.file_path
         split_files = []
         logging.info("Splitting file {}".format(file_to_parse))

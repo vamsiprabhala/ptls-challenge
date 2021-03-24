@@ -1,6 +1,7 @@
 import os 
 import glob
 from typing import List
+import logging
 
 class MapReducer:
     """
