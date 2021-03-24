@@ -1,0 +1,199 @@
+$ make run JSON_FILE_PATH=~/Desktop/twitter-challenge/application-trace.json
+python3 -m venv .ptls-venv
+./.ptls-venv/bin/pip install -r requirements.txt
+Collecting appnope==0.1.2 (from -r requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/e4/fa/0c6c9786aa6927d12d100d322588e125e6ed466ab0a3d2d509ea18aeb56d/appnope-0.1.2-py2.py3-none-any.whl
+Collecting autopep8==1.5.6 (from -r requirements.txt (line 2))
+  Using cached https://files.pythonhosted.org/packages/5e/41/5bfb10d1a480556ff114cce2ba124416b86197ef7bd6e600b021477856d9/autopep8-1.5.6-py2.py3-none-any.whl
+Collecting backcall==0.2.0 (from -r requirements.txt (line 3))
+  Using cached https://files.pythonhosted.org/packages/4c/1c/ff6546b6c12603d8dd1070aa3c3d273ad4c07f5771689a7b69a550e8c951/backcall-0.2.0-py2.py3-none-any.whl
+Collecting cycler==0.10.0 (from -r requirements.txt (line 4))
+  Using cached https://files.pythonhosted.org/packages/f7/d2/e07d3ebb2bd7af696440ce7e754c59dd546ffe1bbe732c8ab68b9c834e61/cycler-0.10.0-py2.py3-none-any.whl
+Collecting decorator==4.4.2 (from -r requirements.txt (line 5))
+  Using cached https://files.pythonhosted.org/packages/ed/1b/72a1821152d07cf1d8b6fce298aeb06a7eb90f4d6d41acec9861e7cc6df0/decorator-4.4.2-py2.py3-none-any.whl
+Collecting ijson==3.1.4 (from -r requirements.txt (line 6))
+  Using cached https://files.pythonhosted.org/packages/9b/8e/68485ba0f98b791476e179ba88d16d602d6833f343044a82703d41c43dd4/ijson-3.1.4-cp37-cp37m-macosx_10_9_x86_64.whl
+Collecting ipykernel==5.5.0 (from -r requirements.txt (line 7))
+  Using cached https://files.pythonhosted.org/packages/56/95/3a670c8b2c2370bd8631c313f42e60983b3113ffec4035940592252bd6d5/ipykernel-5.5.0-py3-none-any.whl
+Collecting ipython==7.21.0 (from -r requirements.txt (line 8))
+  Using cached https://files.pythonhosted.org/packages/3b/43/6dbd0610550708fc418ad027fda97b5f415da9053749641654fdacfec93f/ipython-7.21.0-py3-none-any.whl
+Collecting ipython-genutils==0.2.0 (from -r requirements.txt (line 9))
+  Using cached https://files.pythonhosted.org/packages/fa/bc/9bd3b5c2b4774d5f33b2d544f1460be9df7df2fe42f352135381c347c69a/ipython_genutils-0.2.0-py2.py3-none-any.whl
+Collecting jedi==0.18.0 (from -r requirements.txt (line 10))
+  Using cached https://files.pythonhosted.org/packages/f9/36/7aa67ae2663025b49e8426ead0bad983fee1b73f472536e9790655da0277/jedi-0.18.0-py2.py3-none-any.whl
+Collecting jupyter-client==6.1.12 (from -r requirements.txt (line 11))
+  Using cached https://files.pythonhosted.org/packages/77/e8/c3cf72a32a697256608d5fa96360c431adec6e1c6709ba7f13f99ff5ee04/jupyter_client-6.1.12-py3-none-any.whl
+Collecting jupyter-core==4.7.1 (from -r requirements.txt (line 12))
+  Using cached https://files.pythonhosted.org/packages/53/40/5af36bffa0af3ac71d3a6fc6709de10e4f6ff7c01745b8bc4715372189c9/jupyter_core-4.7.1-py3-none-any.whl
+Collecting kiwisolver==1.3.1 (from -r requirements.txt (line 13))
+  Using cached https://files.pythonhosted.org/packages/49/9b/f45d28fc09ff54287d60c7e0056b306b7c9abe5d23ac8f5686f7c940d30b/kiwisolver-1.3.1-cp37-cp37m-macosx_10_9_x86_64.whl
+Collecting matplotlib==3.3.4 (from -r requirements.txt (line 14))
+  Using cached https://files.pythonhosted.org/packages/7e/32/46285e083ce5b4a46468236e3073c794324700e62d7fbf26894ec390d99a/matplotlib-3.3.4-cp37-cp37m-macosx_10_9_x86_64.whl
+Collecting numpy==1.20.1 (from -r requirements.txt (line 15))
+  Using cached https://files.pythonhosted.org/packages/68/30/a8ce4cb0c084cc1442408807dde60f9796356ea056ca6ef81c865a3d4e62/numpy-1.20.1-cp37-cp37m-macosx_10_9_x86_64.whl
+Collecting pandas==1.2.3 (from -r requirements.txt (line 16))
+  Using cached https://files.pythonhosted.org/packages/cf/6a/b662206fd22c2f9bf70793ceb2db99cf45cfaf13f11effdee45f6e5c22e1/pandas-1.2.3-cp37-cp37m-macosx_10_9_x86_64.whl
+Collecting parso==0.8.1 (from -r requirements.txt (line 17))
+  Using cached https://files.pythonhosted.org/packages/ad/f0/ef6bdb1eba2dbfda60c985cd8d7b47b6ed8c6a1f5d212f39ff50b64f172c/parso-0.8.1-py2.py3-none-any.whl
+Collecting pexpect==4.8.0 (from -r requirements.txt (line 18))
+  Using cached https://files.pythonhosted.org/packages/39/7b/88dbb785881c28a102619d46423cb853b46dbccc70d3ac362d99773a78ce/pexpect-4.8.0-py2.py3-none-any.whl
+Collecting pickleshare==0.7.5 (from -r requirements.txt (line 19))
+  Using cached https://files.pythonhosted.org/packages/9a/41/220f49aaea88bc6fa6cba8d05ecf24676326156c23b991e80b3f2fc24c77/pickleshare-0.7.5-py2.py3-none-any.whl
+Collecting Pillow==8.1.2 (from -r requirements.txt (line 20))
+  Using cached https://files.pythonhosted.org/packages/69/3f/926523d380ed32194148b04f968e4f5f22d87e9837ec3f93e47daf432bc1/Pillow-8.1.2-cp37-cp37m-macosx_10_10_x86_64.whl
+Collecting prompt-toolkit==3.0.18 (from -r requirements.txt (line 21))
+  Using cached https://files.pythonhosted.org/packages/eb/e6/4b4ca4fa94462d4560ba2f4e62e62108ab07be2e16a92e594e43b12d3300/prompt_toolkit-3.0.18-py3-none-any.whl
+Collecting ptyprocess==0.7.0 (from -r requirements.txt (line 22))
+  Using cached https://files.pythonhosted.org/packages/22/a6/858897256d0deac81a172289110f31629fc4cee19b6f01283303e18c8db3/ptyprocess-0.7.0-py2.py3-none-any.whl
+Collecting py4j==0.10.9 (from -r requirements.txt (line 23))
+  Using cached https://files.pythonhosted.org/packages/9e/b6/6a4fb90cd235dc8e265a6a2067f2a2c99f0d91787f06aca4bcf7c23f3f80/py4j-0.10.9-py2.py3-none-any.whl
+Collecting pycodestyle==2.7.0 (from -r requirements.txt (line 24))
+  Using cached https://files.pythonhosted.org/packages/de/cc/227251b1471f129bc35e966bb0fceb005969023926d744139642d847b7ae/pycodestyle-2.7.0-py2.py3-none-any.whl
+Collecting Pygments==2.8.1 (from -r requirements.txt (line 25))
+  Using cached https://files.pythonhosted.org/packages/3a/80/a52c0a7c5939737c6dca75a831e89658ecb6f590fb7752ac777d221937b9/Pygments-2.8.1-py3-none-any.whl
+Collecting pyparsing==2.4.7 (from -r requirements.txt (line 26))
+  Using cached https://files.pythonhosted.org/packages/8a/bb/488841f56197b13700afd5658fc279a2025a39e22449b7cf29864669b15d/pyparsing-2.4.7-py2.py3-none-any.whl
+Collecting pyspark==3.1.1 (from -r requirements.txt (line 27))
+  Using cached https://files.pythonhosted.org/packages/45/b0/9d6860891ab14a39d4bddf80ba26ce51c2f9dc4805e5c6978ac0472c120a/pyspark-3.1.1.tar.gz
+Collecting python-dateutil==2.8.1 (from -r requirements.txt (line 28))
+  Using cached https://files.pythonhosted.org/packages/d4/70/d60450c3dd48ef87586924207ae8907090de0b306af2bce5d134d78615cb/python_dateutil-2.8.1-py2.py3-none-any.whl
+Collecting pytz==2021.1 (from -r requirements.txt (line 29))
+  Using cached https://files.pythonhosted.org/packages/70/94/784178ca5dd892a98f113cdd923372024dc04b8d40abe77ca76b5fb90ca6/pytz-2021.1-py2.py3-none-any.whl
+Collecting pyzmq==22.0.3 (from -r requirements.txt (line 30))
+  Using cached https://files.pythonhosted.org/packages/1d/fa/dc2b9cd759904fa5657331f113919af839ba1026cfaa70285b6dc58c32e3/pyzmq-22.0.3-cp37-cp37m-macosx_10_9_x86_64.whl
+Collecting six==1.15.0 (from -r requirements.txt (line 31))
+  Using cached https://files.pythonhosted.org/packages/ee/ff/48bde5c0f013094d729fe4b0316ba2a24774b3ff1c52d924a8a4cb04078a/six-1.15.0-py2.py3-none-any.whl
+Collecting toml==0.10.2 (from -r requirements.txt (line 32))
+  Using cached https://files.pythonhosted.org/packages/44/6f/7120676b6d73228c96e17f1f794d8ab046fc910d781c8d151120c3f1569e/toml-0.10.2-py2.py3-none-any.whl
+Collecting tornado==6.1 (from -r requirements.txt (line 33))
+  Using cached https://files.pythonhosted.org/packages/94/7b/08b0411898512b0f2b9d4f2c2a53749e7396176bdcf0a92812353d015420/tornado-6.1-cp37-cp37m-macosx_10_9_x86_64.whl
+Collecting traitlets==5.0.5 (from -r requirements.txt (line 34))
+  Using cached https://files.pythonhosted.org/packages/f6/7d/3ecb0ebd0ce8dcdfa7bd47ab85c1d4a521e6770ef283d0824f5804994dfe/traitlets-5.0.5-py3-none-any.whl
+Collecting wcwidth==0.2.5 (from -r requirements.txt (line 35))
+  Using cached https://files.pythonhosted.org/packages/59/7c/e39aca596badaf1b78e8f547c807b04dae603a433d3e7a7e04d67f2ef3e5/wcwidth-0.2.5-py2.py3-none-any.whl
+Requirement already satisfied: setuptools>=18.5 in ./.ptls-venv/lib/python3.7/site-packages (from ipython==7.21.0->-r requirements.txt (line 8)) (40.6.2)
+Installing collected packages: appnope, toml, pycodestyle, autopep8, backcall, six, cycler, decorator, ijson, ptyprocess, pexpect, pickleshare, parso, jedi, wcwidth, prompt-toolkit, Pygments, ipython-genutils, traitlets, ipython, pyzmq, python-dateutil, jupyter-core, tornado, jupyter-client, ipykernel, kiwisolver, numpy, pyparsing, Pillow, matplotlib, pytz, pandas, py4j, pyspark
+  Running setup.py install for pyspark ... done
+Successfully installed Pillow-8.1.2 Pygments-2.8.1 appnope-0.1.2 autopep8-1.5.6 backcall-0.2.0 cycler-0.10.0 decorator-4.4.2 ijson-3.1.4 ipykernel-5.5.0 ipython-7.21.0 ipython-genutils-0.2.0 jedi-0.18.0 jupyter-client-6.1.12 jupyter-core-4.7.1 kiwisolver-1.3.1 matplotlib-3.3.4 numpy-1.20.1 pandas-1.2.3 parso-0.8.1 pexpect-4.8.0 pickleshare-0.7.5 prompt-toolkit-3.0.18 ptyprocess-0.7.0 py4j-0.10.9 pycodestyle-2.7.0 pyparsing-2.4.7 pyspark-3.1.1 python-dateutil-2.8.1 pytz-2021.1 pyzmq-22.0.3 six-1.15.0 toml-0.10.2 tornado-6.1 traitlets-5.0.5 wcwidth-0.2.5
+You are using pip version 18.1, however version 21.0.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+./.ptls-venv/bin/python3 ptls_challenge/app.py /Users/vkprabhala/Desktop/twitter-challenge/application-trace.json
+2021-03-24 15:47:31: INFO: Splitting file /Users/vkprabhala/Desktop/twitter-challenge/application-trace.json
+2021-03-24 15:47:31: INFO: Writing split = 0
+2021-03-24 15:47:39: INFO: Writing split = 0 complete
+2021-03-24 15:47:39: INFO: ====================
+2021-03-24 15:47:39: INFO: Writing split = 1
+2021-03-24 15:47:47: INFO: Writing split = 1 complete
+2021-03-24 15:47:47: INFO: ====================
+2021-03-24 15:47:47: INFO: Writing split = 2
+2021-03-24 15:47:58: INFO: Writing split = 2 complete
+2021-03-24 15:47:58: INFO: ====================
+2021-03-24 15:47:58: INFO: Writing split = 3
+2021-03-24 15:48:07: INFO: Writing split = 3 complete
+2021-03-24 15:48:07: INFO: ====================
+2021-03-24 15:48:07: INFO: Writing split = 4
+2021-03-24 15:48:18: INFO: Writing split = 4 complete
+2021-03-24 15:48:18: INFO: ====================
+2021-03-24 15:48:18: INFO: Writing split = 5
+2021-03-24 15:48:32: INFO: Writing split = 5 complete
+2021-03-24 15:48:32: INFO: ====================
+2021-03-24 15:48:32: INFO: Writing split = 6
+2021-03-24 15:48:41: INFO: Writing split = 6 complete
+2021-03-24 15:48:41: INFO: ====================
+2021-03-24 15:48:41: INFO: Writing split = 7
+2021-03-24 15:48:48: INFO: Writing split = 7 complete
+2021-03-24 15:48:48: INFO: ====================
+2021-03-24 15:48:48: INFO: Writing split = 8
+2021-03-24 15:48:56: INFO: File split complete. Wrote 9 splits
+2021-03-24 15:48:56: INFO: Split files to be processed -> ['/Users/vkprabhala/Desktop/twitter-challenge/split-0.txt', '/Users/vkprabhala/Desktop/twitter-challenge/split-1.txt', '/Users/vkprabhala/Desktop/twitter-challenge/split-2.txt', '/Users/vkprabhala/Desktop/twitter-challenge/split-3.txt', '/Users/vkprabhala/Desktop/twitter-challenge/split-4.txt', '/Users/vkprabhala/Desktop/twitter-challenge/split-5.txt', '/Users/vkprabhala/Desktop/twitter-challenge/split-6.txt', '/Users/vkprabhala/Desktop/twitter-challenge/split-7.txt', '/Users/vkprabhala/Desktop/twitter-challenge/split-8.txt']
+2021-03-24 15:48:56: INFO: **************Start Computing Metrics**************
+2021-03-24 15:48:56: INFO: ============================================================
+2021-03-24 15:48:56: INFO: **************Computing Metric Span Messages**************
+2021-03-24 15:48:56: INFO: =====Start Reducer Step=====
+2021-03-24 15:48:56: INFO: =====Start Mapper Step=====
+2021-03-24 15:49:32: INFO: =====Mapper Step Complete=====
+2021-03-24 15:49:32: INFO: =====Reducer Step Complete=====
+2021-03-24 15:49:32: INFO: Span Messages = 884000
+2021-03-24 15:49:32: INFO: **************Computing Metric Span Messages Complete**************
+2021-03-24 15:49:32: INFO: ============================================================
+2021-03-24 15:49:32: INFO: **************Computing Metric Unique Spans**************
+2021-03-24 15:49:32: INFO: =====Start Reducer Step=====
+2021-03-24 15:49:32: INFO: =====Start Mapper Step=====
+2021-03-24 15:50:20: INFO: =====Mapper Step Complete=====
+2021-03-24 15:50:20: INFO: =====Reducer Step Complete=====
+2021-03-24 15:50:20: INFO: Unique Spans = 441987
+2021-03-24 15:50:20: INFO: **************Computing Metric Unique Spans Complete**************
+2021-03-24 15:50:20: INFO: ============================================================
+2021-03-24 15:50:20: INFO: **************Computing Metric Traces**************
+2021-03-24 15:50:20: INFO: =====Start Reducer Step=====
+2021-03-24 15:50:20: INFO: =====Start Mapper Step=====
+2021-03-24 15:51:14: INFO: =====Mapper Step Complete=====
+2021-03-24 15:51:14: INFO: =====Reducer Step Complete=====
+2021-03-24 15:51:14: INFO: Number of Traces = 34000
+2021-03-24 15:51:14: INFO: **************Computing Metric Traces Complete**************
+2021-03-24 15:51:14: INFO: ============================================================
+2021-03-24 15:51:14: INFO: **************Computing Metric Span Names**************
+2021-03-24 15:51:14: INFO: =====Start Reducer Step=====
+2021-03-24 15:51:14: INFO: =====Mapper Step Complete=====
+2021-03-24 15:51:58: INFO: =====Mapper Step Complete=====
+2021-03-24 15:51:58: INFO: =====Reducer Step Complete=====
+2021-03-24 15:51:58: INFO: Span Names = {'loading-timeline-tweets', 'rendering-notification-count', 'authenticating-user', 'rendering-message-count', 'time-to-fully-loaded', 'rendering-timeline-tweets', 'loading-feature-flags', 'initializing-application', 'rendering-cached-tweets', 'loading-notifications', 'loading-direct-messages', 'loading-cached-tweets', 'finalize-application-start'}
+2021-03-24 15:51:58: INFO: **************Computing Metric Span Names Complete**************
+2021-03-24 15:51:58: INFO: ============================================================
+2021-03-24 15:51:58: INFO: **************Computing Metric Trace names**************
+2021-03-24 15:51:58: INFO: =====Start Reducer Step=====
+2021-03-24 15:51:58: INFO: =====Start Mapper Step=====
+2021-03-24 15:52:56: INFO: =====Mapper Step Complete=====
+2021-03-24 15:52:56: INFO: =====Reducer Step Complete=====
+2021-03-24 15:52:56: INFO: Trace Names = {'time-to-fully-loaded'}
+2021-03-24 15:52:56: INFO: **************Computing Metric Trace names Complete**************
+2021-03-24 15:52:56: INFO: ============================================================
+2021-03-24 15:52:56: INFO: **************Computing Metric Span Duration Statistics**************
+2021-03-24 15:52:56: INFO: =====Start Reducer Step=====
+2021-03-24 15:52:56: INFO: =====Start Mapper Step=====
+2021-03-24 15:53:31: INFO: =====Mapper Step Complete=====
+2021-03-24 15:53:31: INFO: =====Reducer Step Complete=====
+2021-03-24 15:53:31: INFO: Span Duration Stats = {'min_duration': 1000, 'max_duration': 65166000, 'avg_duration': 515364, 'p95_duration': 2365000}
+2021-03-24 15:53:31: INFO: **************Computing Metric Span Duration Statistics Complete**************
+2021-03-24 15:53:31: INFO: ============================================================
+2021-03-24 15:53:31: INFO: **************Computing Metric Longest&Shortest Spans**************
+2021-03-24 15:53:31: INFO: =====Start Reducer Step=====
+2021-03-24 15:53:31: INFO: =====Start Mapper Step=====
+2021-03-24 15:54:00: INFO: =====Mapper Step Complete=====
+2021-03-24 15:54:00: INFO: =====Reducer Step Complete=====
+2021-03-24 15:54:00: INFO: Span Name Avg Duration Stats = {'Longest Avg Duration Span Name': 'time-to-fully-loaded', 'Shortest Avg Duration Span Name': 'finalize-application-start'}
+2021-03-24 15:54:00: INFO: **************Computing Metric Longest&Shortest Spans Complete**************
+2021-03-24 15:54:00: INFO: ============================================================
+2021-03-24 15:54:00: INFO: **************Comparing App Version Performances**************
+2021-03-24 15:54:00: INFO: =====Start Reducer Step=====
+2021-03-24 15:54:00: INFO: =====Start Mapper Step=====
+2021-03-24 15:54:31: INFO: =====Mapper Step Complete=====
+(('authenticating-user', '123', 'US'), (197056, 9999)) is faster and has less average duration compared to (('authenticating-user', '123', 'BR'), (198408, 4000))
+(('authenticating-user', '234', 'BR'), (197042, 9999)) is faster and has less average duration compared to (('authenticating-user', '234', 'US'), (197122, 10000))
+(('finalize-application-start', '123', 'US'), (96722, 10000)) is faster and has less average duration compared to (('finalize-application-start', '123', 'BR'), (98760, 4000))
+(('finalize-application-start', '234', 'BR'), (97064, 10000)) is faster and has less average duration compared to (('finalize-application-start', '234', 'US'), (97110, 9999))
+(('initializing-application', '123', 'US'), (795932, 10000)) is faster and has less average duration compared to (('initializing-application', '123', 'BR'), (796583, 4000))
+(('initializing-application', '234', 'US'), (695003, 10000)) is faster and has less average duration compared to (('initializing-application', '234', 'BR'), (995359, 10000))
+(('loading-cached-tweets', '123', 'US'), (297422, 9999)) is faster and has less average duration compared to (('loading-cached-tweets', '123', 'BR'), (298058, 4000))
+(('loading-cached-tweets', '234', 'BR'), (296844, 10000)) is faster and has less average duration compared to (('loading-cached-tweets', '234', 'US'), (297054, 9999))
+(('loading-direct-messages', '123', 'US'), (296963, 9982)) is faster and has less average duration compared to (('loading-direct-messages', '123', 'BR'), (298906, 3992))
+(('loading-direct-messages', '234', 'US'), (296997, 9972)) is faster and has less average duration compared to (('loading-direct-messages', '234', 'BR'), (297316, 9993))
+(('loading-feature-flags', '123', 'US'), (297417, 10000)) is faster and has less average duration compared to (('loading-feature-flags', '123', 'BR'), (298333, 4000))
+(('loading-feature-flags', '234', 'US'), (296912, 9999)) is faster and has less average duration compared to (('loading-feature-flags', '234', 'BR'), (297255, 9999))
+(('loading-notifications', '123', 'US'), (297268, 9984)) is faster and has less average duration compared to (('loading-notifications', '123', 'BR'), (297529, 3995))
+(('loading-notifications', '234', 'BR'), (296678, 9994)) is faster and has less average duration compared to (('loading-notifications', '234', 'US'), (296903, 9992))
+(('loading-timeline-tweets', '123', 'US'), (297012, 9993)) is faster and has less average duration compared to (('loading-timeline-tweets', '123', 'BR'), (298289, 3998))
+(('loading-timeline-tweets', '234', 'US'), (296932, 9998)) is faster and has less average duration compared to (('loading-timeline-tweets', '234', 'BR'), (297193, 9999))
+(('rendering-cached-tweets', '123', 'US'), (396499, 9996)) is faster and has less average duration compared to (('rendering-cached-tweets', '123', 'BR'), (398387, 4000))
+(('rendering-cached-tweets', '234', 'US'), (396592, 9999)) is faster and has less average duration compared to (('rendering-cached-tweets', '234', 'BR'), (396682, 10000))
+(('rendering-message-count', '123', 'US'), (395976, 9978)) is faster and has less average duration compared to (('rendering-message-count', '123', 'BR'), (397586, 3989))
+(('rendering-message-count', '234', 'BR'), (396011, 9984)) is faster and has less average duration compared to (('rendering-message-count', '234', 'US'), (396899, 9990))
+(('rendering-notification-count', '123', 'US'), (396383, 9983)) is faster and has less average duration compared to (('rendering-notification-count', '123', 'BR'), (397407, 3989))
+(('rendering-notification-count', '234', 'BR'), (395591, 9983)) is faster and has less average duration compared to (('rendering-notification-count', '234', 'US'), (402634, 9991))
+(('rendering-timeline-tweets', '123', 'US'), (395558, 9983)) is faster and has less average duration compared to (('rendering-timeline-tweets', '123', 'BR'), (397478, 3992))
+(('rendering-timeline-tweets', '234', 'US'), (395975, 9992)) is faster and has less average duration compared to (('rendering-timeline-tweets', '234', 'BR'), (396051, 9991))
+(('time-to-fully-loaded', '123', 'BR'), (2389939, 4000)) is faster and has less average duration compared to (('time-to-fully-loaded', '123', 'US'), (2476307, 10000))
+(('time-to-fully-loaded', '234', 'US'), (2384519, 9999)) is faster and has less average duration compared to (('time-to-fully-loaded', '234', 'BR'), (2599850, 10000))
+2021-03-24 15:54:31: INFO: =====Reducer Step Complete=====
+2021-03-24 15:54:31: INFO: None
+2021-03-24 15:54:31: INFO: **************Comparing App Version Performances Complete**************
