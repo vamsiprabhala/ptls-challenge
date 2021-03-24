@@ -1,9 +1,9 @@
 #### Data Analysis
 Data analysis for the questions was done in 2 ways.
-1. Using PySpark to compute the metrics
+1. Using PySpark to compute the metrics - `data-analysis.ipynb` in the top level of the repository with outputs embedded in it.
 2. Python code to replicate the metric computation
 
-##### Python Code programming model
+#### Python Code programming model
 The code was implemented keeping in mind the constraint that file won't fit in memory and that the data can be big. 
 MapReduce programming model was chosen to implement the solution with the following structure. On a high level, the program has the following steps. 
 
