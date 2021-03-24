@@ -16,7 +16,6 @@ run: venv
 	./$(VENV)/bin/python3 ptls_challenge/app.py $(JSON_FILE_PATH)
 
 clean:
-	deactivate
 	rm -rf $(VENV)
 	find . -type f -name '*.pyc' -delete
 
