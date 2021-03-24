@@ -2,15 +2,18 @@
 
 2 options are provided to run the app which are explained below.
 
-#### Option-1
+#### Option1 - Makefile
+
 Download source code to a local directory using 
 
-`git clone git@github.com:vamsiprabhala/ptls-challenge.git`
+    $ git clone git@github.com:vamsiprabhala/ptls-challenge.git`
+
+Then 
 
     $ cd ptls-challenge
     $ make run JSON_FILE_PATH=ABSOLUTE_FILE_SYSTEM_PATH_WITH_FILE_NAME
 
-The following steps will occur
+The following steps will occur on executing `make run`
  - virtual environment will be created
  - required packages will be installed
  - app.py will be run and results are printed to `stdout`
@@ -20,11 +23,12 @@ To clean up after the run, use
     $ make clean
 
 
-#### Option-2
+#### Option2 - Manual
+
 ##### Download source code
 Download source code to a local directory using 
 
-`git clone git@github.com:vamsiprabhala/ptls-challenge.git` 
+    git clone git@github.com:vamsiprabhala/ptls-challenge.git
 
 ##### Setup virtual environment
     python -m venv .venv 
